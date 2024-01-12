@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../assest/css/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lavishStyloo.controller.Admin.EmployeeSalaryFromController">
+   <children>
+      <AnchorPane fx:id="pane" layoutY="-4.0" prefHeight="1003.0" prefWidth="1413.0" stylesheets="@../assest/css/css.css">
+         <children>
+            <Pane layoutX="601.0" layoutY="118.0" prefHeight="200.0" prefWidth="739.0" styleClass="shadow">
+               <children>
+                  <JFXButton layoutX="58.0" layoutY="137.0" onAction="#btnTotalOnAction" prefHeight="50.0" prefWidth="660.0" style="-fx-background-radius: 10; -fx-background-color: #8D9DCA;">
+                     <graphic>
+                        <GridPane prefHeight="52.0" prefWidth="649.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="65.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="410.0" minWidth="10.0" prefWidth="133.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="463.0" minWidth="10.0" prefWidth="451.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-fill: white;" styleClass="txt" text="Done" wrappingWidth="39.623695373535156">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-fill: white;" styleClass="txt" text="Net Salary" wrappingWidth="131.62369537353516" GridPane.columnIndex="1" />
+                              <Text fx:id="txtNetTotal" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-fill: white;" styleClass="txt" text="00.00" textAlignment="RIGHT" wrappingWidth="410.62369537353516" GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField fx:id="LblBones" focusColor="WHITE" layoutX="117.0" layoutY="72.0" onKeyReleased="#lblBonesOnKeyReleased" prefHeight="50.0" prefWidth="338.0" promptText="Bones" style="-fx-font-size: 25;" unFocusColor="WHITE">
+                     <styleClass>
+                        <String fx:value="txt" />
+                        <String fx:value="text-field-normal" />
+                     </styleClass>
+                  </JFXTextField>
+                  <Text fx:id="txtAttendance" layoutX="459.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 45; -fx-fill: #8087A4;" styleClass="txt" text="0" textAlignment="RIGHT" wrappingWidth="102.99998567998409" />
+                  <Text fx:id="txtAddress12" layoutX="583.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 35; -fx-fill: #8087A4;" styleClass="txt" text="Attend" textAlignment="RIGHT" wrappingWidth="114.99998567998409" />
+                  <Text fx:id="txtAddress3" layoutX="583.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" styleClass="txt" text="in This Month" wrappingWidth="127.62367552518845" />
+                  <Text fx:id="txtAddresse" layoutX="51.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-fill: #8087A4;" styleClass="txt" text="LKR." textAlignment="RIGHT" wrappingWidth="62.99998567998409" />
+                  <JFXTextField fx:id="lblSalary" focusColor="WHITE" layoutX="115.0" layoutY="11.0" onKeyReleased="#lblSalaryOnKeyReleased" prefHeight="50.0" prefWidth="338.0" promptText="For Day Pay" style="-fx-font-size: 25;" unFocusColor="WHITE">
+                     <styleClass>
+                        <String fx:value="txt" />
+                        <String fx:value="text-field-normal" />
+                     </styleClass>
+                  </JFXTextField>
+                  <Text fx:id="txtAddresse1" layoutX="51.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-fill: #8087A4;" styleClass="txt" text="LKR." textAlignment="RIGHT" wrappingWidth="62.99998567998409" />
+               </children>
+            </Pane>
+            <Pane layoutX="59.0" layoutY="136.0" prefHeight="166.0" prefWidth="579.0" styleClass="shadow">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="543.0" layoutY="69.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icon/icons8-back-arrow-52.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="LblCode" focusColor="WHITE" layoutX="22.0" layoutY="14.0" onKeyReleased="#lblNicOnKeyReleased" prefHeight="50.0" prefWidth="270.0" promptText="NIC" style="-fx-font-size: 25;" unFocusColor="WHITE">
+                     <styleClass>
+                        <String fx:value="txt" />
+                        <String fx:value="text-field-normal" />
+                     </styleClass>
+                  </JFXTextField>
+                  <Text layoutX="22.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="txt" text="Address" wrappingWidth="127.62369537353516" />
+                  <Text fx:id="txtAddress" layoutX="22.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #8087A4;" styleClass="txt" wrappingWidth="337.9999856799841" />
+                  <Text layoutX="22.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="txt" text="contact" wrappingWidth="127.62369537353516" />
+                  <Text fx:id="txtName" layoutX="298.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 35; -fx-fill: #8087A4;" styleClass="txt" textAlignment="RIGHT" wrappingWidth="232.9999856799841" />
+                  <Text fx:id="txtContact" layoutX="22.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 17; -fx-fill: #8087A4;" styleClass="txt" wrappingWidth="506.9999856799841" />
+               </children>
+            </Pane>
+         </children></AnchorPane>
+      <Pane layoutX="41.0" layoutY="53.0" prefHeight="42.0" prefWidth="338.0" styleClass="round-greed">
+         <children>
+            <JFXTextField fx:id="txtSearchText" alignment="CENTER" focusColor="#ffffff00" layoutX="1.0" layoutY="1.0" onKeyReleased="#employeeFromSearchOnKeyReleased" prefHeight="39.0" prefWidth="293.0" styleClass="text-field-search" unFocusColor="#4d4d4d00" />
+            <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="303.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icon/icons8-search-50%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="407.0" layoutY="54.0" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn">
+         <children>
+            <Text layoutX="39.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57;" styleClass="txt" text="Wed, Nov 11" wrappingWidth="127.62369537353516" />
+         </children>
+      </Pane>
+      <Pane layoutX="43.0" layoutY="334.0" prefHeight="628.0" prefWidth="1376.0" styleClass="shadow">
+         <children>
+            <Text layoutX="65.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57;" styleClass="txt" text="Salary" wrappingWidth="269.62369537353516" />
+            <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="23.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icon/icons8-data-sheet-50.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tbl" layoutX="22.0" layoutY="66.0" prefHeight="528.0" prefWidth="1322.0">
+               <columns>
+                  <TableColumn fx:id="colId" prefWidth="122.66665649414062" text="    #" />
+                  <TableColumn fx:id="colName" minWidth="0.0" prefWidth="265.0000457763672" text="    Name" />
+                  <TableColumn fx:id="colAddress" minWidth="0.0" prefWidth="273.0" text="Address" />
+                  <TableColumn fx:id="colMail" minWidth="0.0" prefWidth="231.0" text="Mail" />
+                  <TableColumn fx:id="colContact" minWidth="0.0" prefWidth="164.0" text="Contact" />
+                  <TableColumn fx:id="colBones" minWidth="0.0" prefWidth="128.3333740234375" text="Bones" />
+                  <TableColumn fx:id="colSalary" minWidth="0.0" prefWidth="127.0" text="Salary" />
+               </columns>
+               <stylesheets>
+                  <URL value="@../assest/css/tbl.css" />
+                  <URL value="@../assest/css/css.css" />
+               </stylesheets>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,170 @@
+AnchorPane {
+    -fx-background-color: #F8F2FF;
+}
+
+.nav-btn {
+    -fx-effect: dropshadow(three-pass-box, rgba(87, 176, 201, 0.44), 8, 0, 0, 2);
+
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-background-color: white;
+}
+
+.nav-btn:hover {
+    -fx-background-color: #FDF9F0;
+    -fx-effect: dropshadow(three-pass-box, #57B0C9, 5, 0.8, 0, 0);
+}
+
+.bg-white {
+    -fx-background-color: white;
+}
+
+.round-8 {
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+}
+
+.box-nav-group {
+    -fx-effect: dropshadow(three-pass-box, rgba(50, 47, 22, 0.19), 8, 0, 0, 2);
+
+}
+
+.txt {
+    -fx-font-family: "Calibri";
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-fill: #534D59;
+}
+
+.shadow {
+    -fx-background-radius: 20px;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(56, 116, 141, 0.43), 15, 0, 0, 2);
+
+}
+
+.shadow-2 {
+    -fx-background-radius: 20px;
+
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(56, 116, 141, 0.18), 15, 0, 0, 2);
+
+}
+
+.round-greed {
+    -fx-background-color: #57B0C9;
+    -fx-background-radius: 10 10 10 10;
+    /*-fx-effect: dropshadow( three-pass-box ,  #04D98B, 20, 0.0 , 0 , 1 );*/
+    -fx-border-color: #57B0C9;
+    -fx-border-width: 1;
+    -fx-border-radius: 10 10 10 10;
+}
+
+.round-greed:hover {
+    -fx-background-color: #72d6f1;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+    -fx-effect: dropshadow(three-pass-box, #72d6f1, 2.5, 0.0, 0.0, 1.0);
+}
+
+.text-field-search {
+    -fx-background-color: #FFF;
+    -fx-background-radius: 10 5 5 10;
+    -fx-text-fill: #303833;
+    -fx-font-size: 17;
+}
+
+.border {
+    -fx-border-style: dashed;
+    -fx-border-color: #57B0C9;
+    -fx-border-width: 2;
+    -fx-border-radius: 20px;
+}
+
+.border:hover {
+    -fx-background-color: #f1fbff;
+    -fx-font-size: 22;
+    -fx-effect: dropshadow(three-pass-box, #72d6f1, 2.8, 0.0, 0.0, 1.0);
+}
+
+.radius {
+    -fx-background-radius: 20;
+    -fx-background-color: #ffe8a2;
+}
+
+.radius-red {
+    -fx-background-radius: 20;
+    -fx-background-color: #f68193;
+    -fx-font-weight: bold;
+}
+
+.text-field-normal {
+
+    -fx-background-color: #F6F7F9;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-font-size: 18px;
+    /*-fx-border-color: #747373;*/
+    -fx-border-width: 1;
+    -fx-prompt-text-fill: #90A3BF;
+    -fx-text-fill: #534D59;
+    /*-fx-font-family: Inter;*/
+    -fx-font-family: "Calibri";
+    /*-fx-font-weight: bold;*/
+
+
+}
+
+.action-btn {
+    -fx-background-color: 14;
+}
+
+.date-picker {
+    -fx-font-family: "Calibri";
+    -fx-text-fill: #534D59;
+    -fx-font-size: 18px;
+    -fx-background-color: white;
+}
+.date-picker .arrow-button {
+    -fx-background-color:  white;
+    -fx-background-radius: 0;
+}
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #9FD2E7;
+}
+.date-picker .selected {
+    -fx-background-color: #9FD2E7;
+    -fx-text-fill: #4e4e4e;
+}
+.date-picker .selected:focused {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+.date-picker-popup  {
+    -fx-border-color: white;
+}
+.date-picker-popup .month-year-pane {
+    -fx-background-color: white;
+}
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: #585858;
+}
+.date-picker-popup .month-year-pane .button{
+    -fx-background-color: #9FD2E7;
+    -fx-background-radius: 5;
+}
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: -fx-secondary-color;
+}
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+    -fx-background-color: white;
+}
+.txt-label{
+    -fx-prompt-text-fill:  #8087A4;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    /*-fx-font-weight: transparent;*/
+
+}

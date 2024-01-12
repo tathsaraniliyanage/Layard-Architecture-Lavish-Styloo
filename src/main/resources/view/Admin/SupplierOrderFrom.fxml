@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../assest/css/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lavishStyloo.controller.Admin.SupplerOrderFromController">
+   <children>
+      <AnchorPane layoutX="2.0" layoutY="-1.0" prefHeight="823.0" prefWidth="1755.0">
+         <children>
+            <Pane layoutX="25.0" layoutY="14.0" prefHeight="763.0" prefWidth="1132.0" styleClass="shadow">
+               <children>
+                  <Text layoutX="65.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57;" styleClass="txt" text="Order" wrappingWidth="269.62369537353516" />
+                  <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="23.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icon/icons8-data-sheet-50.png" />
+                     </image>
+                  </ImageView>
+                  <TableView fx:id="tblOrder" layoutX="22.0" layoutY="68.0" prefHeight="657.0" prefWidth="1084.0">
+                     <columns>
+                        <TableColumn fx:id="colCode" prefWidth="103.0" text="#" />
+                        <TableColumn fx:id="colProduct" minWidth="0.0" prefWidth="305.9999694824219" text="Product" />
+                        <TableColumn fx:id="colUnitPrice" minWidth="0.0" prefWidth="254.0" text="Unit Price" />
+                        <TableColumn fx:id="colPrice" minWidth="0.0" prefWidth="253.0" text="Price" />
+                        <TableColumn fx:id="colQty" minWidth="0.0" prefWidth="164.0" text="QTY" />
+                     </columns>
+                     <stylesheets>
+                        <URL value="@../assest/css/tbl.css" />
+                        <URL value="@../assest/css/css.css" />
+                     </stylesheets>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane layoutX="1189.0" layoutY="298.0" prefHeight="274.0" prefWidth="539.0" style="-fx-background-color: white;" styleClass="shadow">
+               <children>
+                  <Text fx:id="txtProduct" layoutX="19.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Product" wrappingWidth="212.62369537353516" />
+                  <ImageView fx:id="imgItem" fitHeight="192.0" fitWidth="200.0" layoutX="302.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text layoutX="270.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #8087A4; -fx-font-size: 20;" styleClass="txt" text="LKR" wrappingWidth="38.99997914682899" />
+                  <Text fx:id="txtPrice" layoutX="305.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #8087A4; -fx-font-size: 25;" styleClass="txt" text="120.00" wrappingWidth="127.62365501569002" />
+                  <Text fx:id="txtQty" layoutX="485.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #8087A4; -fx-font-size: 20;" styleClass="txt" text="20" wrappingWidth="38.99997914682899" />
+                  <ImageView fitHeight="25.0" fitWidth="135.0" layoutX="443.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icon/icons8-count-50.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="txtDescription" layoutX="270.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-fill: #3E4B57; -fx-font-weight: normal;" styleClass="txt" text="All product in You Can See This Counting" wrappingWidth="246.6666325983242" />
+                  <JFXTextField fx:id="LblCode" focusColor="WHITE" layoutX="20.0" layoutY="66.0" onKeyReleased="#lblCodeOnKeyReleased" prefHeight="50.0" prefWidth="234.0" promptText="CODE" style="-fx-font-size: 25;" unFocusColor="WHITE">
+                     <styleClass>
+                        <String fx:value="txt" />
+                        <String fx:value="text-field-normal" />
+                     </styleClass>
+                  </JFXTextField>
+                  <JFXTextField fx:id="lblQty" focusColor="WHITE" layoutX="20.0" layoutY="146.0" onKeyReleased="#lblQryOnKeReleasd" prefHeight="50.0" prefWidth="234.0" promptText="00" style="-fx-font-size: 25;" unFocusColor="WHITE">
+                     <styleClass>
+                        <String fx:value="txt" />
+                        <String fx:value="text-field-normal" />
+                     </styleClass>
+                  </JFXTextField>
+                  <Text layoutX="26.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="txt" text="QTY" wrappingWidth="127.62369537353516" />
+                  <JFXButton fx:id="btnAdd" layoutX="20.0" layoutY="210.0" onAction="#btnAddOnAction" prefHeight="50.0" prefWidth="227.0" style="-fx-background-radius: 10; -fx-background-color: #9080B0;">
+                     <graphic>
+                        <GridPane prefHeight="42.0" prefWidth="209.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="410.0" minWidth="10.0" prefWidth="42.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="446.0" minWidth="10.0" prefWidth="167.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: white;" styleClass="txt" text="LKR" wrappingWidth="39.623695373535156" />
+                              <Text fx:id="txtTotal" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-fill: white;" styleClass="txt" text="00.00" wrappingWidth="164.62369537353516" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane layoutX="1192.0" layoutY="601.0" prefHeight="176.0" prefWidth="531.0" style="-fx-background-color: white;" styleClass="shadow">
+               <children>
+                  <JFXButton layoutX="14.0" layoutY="112.0" onAction="#btnTotalOnAction" prefHeight="50.0" prefWidth="506.0" style="-fx-background-radius: 10; -fx-background-color: #8D9DCA;">
+                     <graphic>
+                        <GridPane prefHeight="52.0" prefWidth="493.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="61.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="410.0" minWidth="10.0" prefWidth="76.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="410.0" minWidth="10.0" prefWidth="351.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-fill: white;" styleClass="txt" text="Pay Now" wrappingWidth="39.623695373535156">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-fill: white;" styleClass="txt" text="Total" wrappingWidth="143.62369537353516" GridPane.columnIndex="1" />
+                              <Text fx:id="txtNetTotal" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-fill: white;" styleClass="txt" text="00.00" textAlignment="RIGHT" wrappingWidth="308.62369537353516" GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField fx:id="lblBalance" focusColor="WHITE" layoutX="22.0" layoutY="39.0" onKeyReleased="#balanceOnKeyReleased" prefHeight="50.0" prefWidth="299.0" promptText="000 00 00" style="-fx-font-size: 25;" unFocusColor="WHITE">
+                     <styleClass>
+                        <String fx:value="txt" />
+                        <String fx:value="text-field-normal" />
+                     </styleClass>
+                  </JFXTextField>
+                  <Text layoutX="26.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="txt" text="Payment" wrappingWidth="127.62369537353516" />
+                  <Text layoutX="360.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="txt" text="Balance" wrappingWidth="127.62369537353516" />
+                  <Text layoutX="361.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #8087A4;" styleClass="txt" text="LKR" wrappingWidth="31.999999477688107" />
+                  <Text fx:id="txtTotalBalance" layoutX="400.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #8087A4;" styleClass="txt" text="00.00" wrappingWidth="127.62366468107211" />
+                  <Pane layoutX="472.0" layoutY="29.0" prefHeight="38.0" prefWidth="39.0" style="-fx-background-color: #96C7DB; -fx-background-radius: 100;" styleClass="shadow">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="25.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/icon/icons8-cart-96.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Text fx:id="txtOrderCount" layoutX="355.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" styleClass="txt" text="0" textAlignment="RIGHT" wrappingWidth="127.62366468107211" />
+               </children>
+            </Pane>
+            <Pane layoutX="1197.0" layoutY="40.0" prefHeight="237.0" prefWidth="531.0" style="-fx-background-color: white;" styleClass="shadow">
+               <children>
+                  <Text fx:id="txtDealer" layoutX="25.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #8087A4;" styleClass="txt" text="Dealer" wrappingWidth="127.62369537353516" />
+                  <JFXComboBox fx:id="cmbSupperId" layoutX="335.0" layoutY="14.0" onAction="#cmbSupperOnaAction" prefHeight="28.0" prefWidth="183.0" promptText="Suppler" />
+                  <Text layoutX="25.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="txt" text="Address" wrappingWidth="127.62369537353516" />
+                  <Text fx:id="txtAddress" layoutX="25.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #8087A4;" styleClass="txt" text="Location" wrappingWidth="388.62369537353516" />
+                  <Text layoutX="27.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="txt" text="Contact" wrappingWidth="127.62369537353516" />
+                  <Text fx:id="txtCompany" layoutX="25.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-fill: #8087A4;" styleClass="txt" text="Company" wrappingWidth="127.62369537353516" />
+                  <Text fx:id="txtContact" layoutX="25.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #8087A4;" styleClass="txt" text="000 000 000" wrappingWidth="388.62369537353516" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

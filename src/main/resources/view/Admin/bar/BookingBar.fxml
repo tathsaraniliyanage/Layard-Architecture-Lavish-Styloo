@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="36.0" prefWidth="266.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lavishStyloo.controller.Admin.bar.BookingBarController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="42.0" prefWidth="527.0" style="-fx-background-radius: 8;" styleClass="shadow-2" stylesheets="@../../assest/css/css.css">
+         <children>
+            <Pane layoutX="269.0" layoutY="6.0" prefHeight="30.0" prefWidth="113.0" styleClass="radius">
+               <children>
+                  <Text fx:id="txtTime" layoutX="13.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57;" styleClass="txt" text="12:30 pm" wrappingWidth="87.99996075034142" />
+               </children>
+            </Pane>
+            <JFXButton layoutX="421.0" layoutY="4.0" onAction="#cancelOnAction" prefHeight="32.0" prefWidth="88.0" styleClass="radius-red" text="Cancel" />
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="13.0" prefWidth="13.0" style="-fx-background-color: #20C997;" styleClass="radius" />
+            <Text fx:id="txtCustomerName" layoutX="42.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57; -fx-font-weight: normal;" styleClass="txt" text="Praboda Thathsarani" textAlignment="CENTER" wrappingWidth="176.00003707408905" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

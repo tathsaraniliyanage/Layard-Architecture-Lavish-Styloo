@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1003.0" prefWidth="1764.0" stylesheets="@../assest/css/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lavishStyloo.controller.Admin.ReportFromController">
+   <children>
+      <ImageView fitHeight="623.0" fitWidth="623.0" layoutX="1039.0" layoutY="175.0" opacity="0.27">
+         <image>
+            <Image url="@../assest/icon/81yiqoN6OoL._AC_UX679_.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="91.0" layoutY="44.0" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn">
+         <children>
+            <Text layoutX="39.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57;" styleClass="txt" text="Wed, Nov 11" wrappingWidth="127.62369537353516" />
+         </children>
+      </Pane>
+      <Pane layoutX="1443.0" layoutY="700.0" prefHeight="259.0" prefWidth="305.0" style="-fx-background-color: #9FD2E7;" styleClass="shadow">
+         <children>
+            <Text fontSmoothingType="LCD" layoutX="31.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40; -fx-fill: white;" styleClass="txt" text="Lavish Styloo" wrappingWidth="235.29035186767578" />
+            <Text fontSmoothingType="LCD" layoutX="63.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: white;" styleClass="txt" text="Like your Style" wrappingWidth="152.62371063232422" />
+            <Text layoutX="45.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57; -fx-font-weight: normal;" styleClass="txt" text="we provide you various treatments from head to toe using thebest product,advanced and affordable price" textAlignment="CENTER" wrappingWidth="192.66666278243065" />
+            <ImageView fitHeight="78.0" fitWidth="77.0" layoutX="242.0" layoutY="-16.0" opacity="0.99" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icon/image-removebg-preview%20(11).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <LineChart fx:id="orders" layoutX="54.0" layoutY="167.0" prefHeight="283.0" prefWidth="1322.0" title="Customer Contrubution">
+        <xAxis>
+          <CategoryAxis fx:id="CY" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <LineChart fx:id="CustomerOrders" layoutX="92.0" layoutY="471.0" prefHeight="448.0" prefWidth="623.0" title="Orders">
+         <xAxis>
+            <CategoryAxis fx:id="OY" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <LineChart fx:id="appointment" layoutX="742.0" layoutY="471.0" prefHeight="448.0" prefWidth="623.0" title="Appoiment">
+         <xAxis>
+            <CategoryAxis fx:id="AY" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <JFXButton fx:id="btn" layoutX="1452.0" layoutY="611.0" onAction="#todayAttendanceAddOnAction" prefHeight="48.0" prefWidth="288.0">
+         <graphic>
+            <GridPane prefHeight="30.0" prefWidth="232.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="180.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="52.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text fill="#545454" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" styleClass="txt" text="TODAY ATTENDANCE" wrappingWidth="161.5000432729721">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@../assest/icon/icons8-add-48%20(2).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </graphic>
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="nav-btn" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton fx:id="btn1" layoutX="1452.0" layoutY="536.0" onAction="#allEmployeeAddOnAction" prefHeight="48.0" prefWidth="288.0">
+         <graphic>
+            <GridPane prefHeight="30.0" prefWidth="232.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="180.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="52.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text fill="#545454" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" styleClass="txt" text="ALL EMPLOYEES" wrappingWidth="161.5000432729721">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@../assest/icon/icons8-add-48%20(2).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </graphic>
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="nav-btn" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton fx:id="btn11" layoutX="1452.0" layoutY="463.0" onAction="#appointmentAddOnAction" prefHeight="48.0" prefWidth="288.0">
+         <graphic>
+            <GridPane prefHeight="30.0" prefWidth="232.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="180.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="52.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text fill="#545454" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" styleClass="txt" text="TODAY APOIMENT" wrappingWidth="161.5000432729721">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@../assest/icon/icons8-add-48%20(2).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </graphic>
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="nav-btn" />
+         </styleClass>
+      </JFXButton>
+      <Pane layoutX="1452.0" layoutY="402.0" prefHeight="39.0" prefWidth="288.0" styleClass="nav-btn">
+         <children>
+            <JFXComboBox fx:id="cmbMonth" focusColor="#ffffff00" layoutX="12.0" layoutY="-1.0" onAction="#cmbMothAction" prefHeight="38.0" prefWidth="265.0" promptText="MONTH" styleClass="txt-label" unFocusColor="#ffffff00" />
+         </children>
+      </Pane>
+      <Pane layoutX="1452.0" layoutY="336.0" prefHeight="39.0" prefWidth="288.0" styleClass="nav-btn">
+         <children>
+            <JFXComboBox fx:id="cmbYear" focusColor="#ffffff00" layoutX="12.0" layoutY="-1.0" onAction="#cmbYearOnAction" prefHeight="38.0" prefWidth="265.0" promptText="YEAR" styleClass="txt-label" unFocusColor="#ffffff00" />
+         </children>
+      </Pane>
+      <Text fontSmoothingType="LCD" layoutX="286.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-fill: #57B0C9;" styleClass="txt" text="Report in" wrappingWidth="127.62370397266932" />
+      <Text fx:id="txtReportStatus" fontSmoothingType="LCD" layoutX="417.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-fill: #57B0C9;" styleClass="txt" text="2023,Nov" wrappingWidth="272.6237039726693" />
+   </children>
+</AnchorPane>

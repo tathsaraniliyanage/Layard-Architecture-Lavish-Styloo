@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane onMouseDragReleased="#priceOnDrag" prefHeight="1003.0" prefWidth="1764.0" stylesheets="@../assest/css/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lavishStyloo.controller.Cashier.ProductFromController">
+   <children>
+      <ImageView fitHeight="623.0" fitWidth="623.0" layoutX="1039.0" layoutY="175.0" opacity="0.27">
+         <image>
+            <Image url="@../assest/icon/81yiqoN6OoL._AC_UX679_.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="1445.0" layoutY="197.0" prefHeight="273.0" prefWidth="294.0" style="-fx-background-color: white;" styleClass="shadow">
+         <children>
+            <Text layoutX="23.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #8087A4; -fx-font-size: 20;" styleClass="txt" text="LKR" wrappingWidth="38.99997914682899" />
+            <ImageView fx:id="img" fitHeight="244.0" fitWidth="260.0" layoutX="75.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="txtPrice" layoutX="58.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #8087A4; -fx-font-size: 25;" styleClass="txt" text="120.00" wrappingWidth="127.62365501569002" />
+            <Text fx:id="txtQty" layoutX="238.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #8087A4; -fx-font-size: 20;" styleClass="txt" text="20" wrappingWidth="38.99997914682899" />
+            <ImageView fitHeight="25.0" fitWidth="135.0" layoutX="196.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icon/icons8-count-50.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtDescription" layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-fill: #3E4B57; -fx-font-weight: normal;" styleClass="txt" text="All product in You Can See This Counting" wrappingWidth="111.66663259832421" />
+         </children>
+      </Pane>
+      <Pane layoutX="31.0" layoutY="43.0" prefHeight="42.0" prefWidth="338.0" styleClass="round-greed">
+         <children>
+            <JFXTextField fx:id="txtSearchText" alignment="CENTER" focusColor="#ffffff00" layoutX="1.0" layoutY="1.0" onKeyReleased="#productFromSearchOnKeyReleased" prefHeight="39.0" prefWidth="293.0" styleClass="text-field-search" unFocusColor="#4d4d4d00" />
+            <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="303.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icon/icons8-search-50%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="397.0" layoutY="44.0" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn">
+         <children>
+            <Text layoutX="39.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57;" styleClass="txt" text="Wed, Nov 11" wrappingWidth="127.62369537353516" />
+         </children>
+      </Pane>
+      <Pane layoutX="33.0" layoutY="189.0" prefHeight="763.0" prefWidth="1376.0" styleClass="shadow">
+         <children>
+            <Text layoutX="65.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57;" styleClass="txt" text="All Product" wrappingWidth="269.62369537353516" />
+            <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="23.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icon/icons8-data-sheet-50.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblProduct" layoutX="22.0" layoutY="82.0" onMouseClicked="#productFromTblOnClick" prefHeight="657.0" prefWidth="1322.0">
+              <columns>
+                <TableColumn fx:id="colCode" prefWidth="122.66665649414062" text="#" />
+                <TableColumn fx:id="colProduct" minWidth="0.0" prefWidth="265.0000457763672" text="Product" />
+                  <TableColumn fx:id="colPrice" minWidth="0.0" prefWidth="273.0" text="Price" />
+                  <TableColumn fx:id="colQty" minWidth="0.0" prefWidth="162.0" text="QTY" />
+                  <TableColumn fx:id="colDescription" minWidth="0.0" prefWidth="490.0" text="Description" />
+              </columns>
+               <stylesheets>
+                  <URL value="@../assest/css/tbl.css" />
+                  <URL value="@../assest/css/css.css" />
+               </stylesheets>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="1433.0" layoutY="690.0" prefHeight="259.0" prefWidth="305.0" style="-fx-background-color: #9FD2E7;" styleClass="shadow">
+         <children>
+            <Text fontSmoothingType="LCD" layoutX="31.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40; -fx-fill: white;" styleClass="txt" text="Lavish Styloo" wrappingWidth="235.29035186767578" />
+            <Text fontSmoothingType="LCD" layoutX="63.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: white;" styleClass="txt" text="Like your Style" wrappingWidth="152.62371063232422" />
+            <Text layoutX="45.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57; -fx-font-weight: normal;" styleClass="txt" text="we provide you various treatments from head to toe using thebest product,advanced and affordable price" textAlignment="CENTER" wrappingWidth="192.66666278243065" />
+            <ImageView fitHeight="78.0" fitWidth="77.0" layoutX="242.0" layoutY="-16.0" opacity="0.99" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icon/image-removebg-preview%20(11).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="1444.0" layoutY="494.0" prefHeight="176.0" prefWidth="294.0" style="-fx-background-color: white;" styleClass="shadow">
+         <children>
+            <Text layoutX="25.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="All Product" wrappingWidth="212.62369537353516" />
+            <Text fx:id="txtAllTodayAttendance" layoutX="44.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 50;" styleClass="txt" text="12+" wrappingWidth="127.62369537353516" />
+            <Text layoutX="29.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" styleClass="txt" text="in this" wrappingWidth="127.62369537353516" />
+            <Text layoutX="157.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-fill: #3E4B57; -fx-font-weight: normal;" styleClass="txt" text="All product in You Can See This Counting" textAlignment="RIGHT" wrappingWidth="111.66663689979032" />
+         </children>
+      </Pane>
+      <Slider fx:id="sPriceRange" layoutX="1462.0" layoutY="125.0" onDragDetected="#priceOnDrag" prefHeight="24.0" prefWidth="270.0" />
+      <Text layoutX="1462.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #8087A4;" styleClass="txt" text="Min" wrappingWidth="38.999984568908985" />
+      <Text layoutX="1684.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #8087A4;" styleClass="txt" text="Max" wrappingWidth="38.999984568908985" />
+      <Text fx:id="txtMin" layoutX="1464.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-fill: #8087A4;" styleClass="txt" text="1000" wrappingWidth="127.6237348284667" />
+      <Text fx:id="txtMax" layoutX="1593.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-fill: #8087A4;" styleClass="txt" text="6000" textAlignment="RIGHT" wrappingWidth="127.6237348284667" />
+      <Text layoutX="1456.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #8087A4;" styleClass="txt" text="LKR" wrappingWidth="38.999984568908985" />
+      <Text fx:id="txtDyPrice" layoutX="1495.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #8087A4;" styleClass="txt" text="00.00" wrappingWidth="201.99998456890899" />
+      <JFXButton fx:id="btnAdd" layoutX="1676.0" layoutY="105.0" minHeight="20.0" minWidth="31.0" onAction="#resetOnAction" prefHeight="22.0" prefWidth="31.0" style="-fx-background-radius: 10;" styleClass="action-btn">
+         <graphic>
+            <GridPane prefHeight="33.0" prefWidth="27.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="59.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icon/icons8-reset-64.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

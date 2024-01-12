@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1003.0" prefWidth="1764.0" stylesheets="@../assest/css/css.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lavishStyloo.controller.Cashier.TreatmentFromController">
+   <children>
+      <ImageView fitHeight="623.0" fitWidth="623.0" layoutX="1039.0" layoutY="175.0" opacity="0.27">
+         <image>
+            <Image url="@../assest/icon/81yiqoN6OoL._AC_UX679_.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="397.0" layoutY="44.0" prefHeight="39.0" prefWidth="182.0" styleClass="nav-btn">
+         <children>
+            <Text layoutX="39.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57;" styleClass="txt" text="Wed, Nov 11" wrappingWidth="127.62369537353516" />
+         </children>
+      </Pane>
+      <Pane layoutX="31.0" layoutY="43.0" prefHeight="42.0" prefWidth="338.0" styleClass="round-greed">
+         <children>
+            <JFXTextField fx:id="txtSearchText" alignment="CENTER" focusColor="#ffffff00" layoutX="1.0" layoutY="1.0" onKeyReleased="#searchOnKeyReleased" prefHeight="39.0" prefWidth="293.0" styleClass="text-field-search" unFocusColor="#4d4d4d00" />
+            <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="303.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icon/icons8-search-50%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="38.0" layoutY="118.0" prefHeight="851.0" prefWidth="1376.0" styleClass="shadow">
+         <children>
+            <Text layoutX="65.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57;" styleClass="txt" text="List Of Treatment" wrappingWidth="269.62369537353516" />
+            <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="23.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icon/icons8-data-sheet-50.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblTreatment" layoutX="22.0" layoutY="68.0" prefHeight="754.0" prefWidth="1295.0">
+               <columns>
+                  <TableColumn fx:id="colId" prefWidth="131.0" text="#" />
+                  <TableColumn fx:id="colTreatment" minWidth="0.0" prefWidth="326.0" text="treatment" />
+                  <TableColumn fx:id="colPrice" minWidth="0.0" prefWidth="246.0" text="price" />
+                  <TableColumn fx:id="colCategory" minWidth="0.0" prefWidth="249.0" text="Category" />
+                  <TableColumn fx:id="colDescription" minWidth="0.0" prefWidth="335.0" text="Description" />
+               </columns>
+               <stylesheets>
+                  <URL value="@../assest/css/tbl.css" />
+                  <URL value="@../assest/css/css.css" />
+               </stylesheets>
+            </TableView>
+         </children>
+      </Pane>
+      <JFXComboBox fx:id="cmbCategory" layoutX="631.0" layoutY="45.0" onAction="#cmbCatOnAction" prefHeight="28.0" prefWidth="204.0" promptText="Catagory" styleClass="txt-label" />
+      <Pane layoutX="1431.0" layoutY="704.0" prefHeight="259.0" prefWidth="305.0" style="-fx-background-color: #9FD2E7;" styleClass="shadow">
+         <children>
+            <Text fontSmoothingType="LCD" layoutX="31.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40; -fx-fill: white;" styleClass="txt" text="Lavish Styloo" wrappingWidth="235.29035186767578" />
+            <Text fontSmoothingType="LCD" layoutX="63.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: white;" styleClass="txt" text="Like your Style" wrappingWidth="152.62371063232422" />
+            <Text layoutX="45.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57; -fx-font-weight: normal;" styleClass="txt" text="we provide you various treatments from head to toe using thebest product,advanced and affordable price" textAlignment="CENTER" wrappingWidth="192.66666278243065" />
+            <ImageView fitHeight="78.0" fitWidth="77.0" layoutX="242.0" layoutY="-16.0" opacity="0.99" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icon/image-removebg-preview%20(11).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="1442.0" layoutY="482.0" prefHeight="176.0" prefWidth="294.0" style="-fx-background-color: white;" styleClass="shadow">
+         <children>
+            <Text layoutX="25.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="All Treatment" wrappingWidth="212.62369537353516" />
+            <Text fx:id="txtAllTreatment" layoutX="44.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 50;" styleClass="txt" text="12+" wrappingWidth="127.62369537353516" />
+            <Text layoutX="29.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" styleClass="txt" text="in this" wrappingWidth="127.62369537353516" />
+            <Text layoutX="157.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-fill: #3E4B57; -fx-font-weight: normal;" styleClass="txt" text="All product in You Can See This Counting" textAlignment="RIGHT" wrappingWidth="111.66663689979032" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

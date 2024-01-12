@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lavishStyloo.controller.Cashier.VewSupperOrderFromController">
+   <children>
+      <AnchorPane layoutX="5.0" prefHeight="823.0" prefWidth="1755.0">
+         <children>
+            <AnchorPane fx:id="paneOrderDetails" layoutX="1053.0" layoutY="20.0" prefHeight="764.0" prefWidth="338.0">
+               <children>
+                  <Pane layoutX="26.0" layoutY="12.0" prefHeight="540.0" prefWidth="294.0" style="-fx-background-color: white;" styleClass="shadow">
+                     <children>
+                        <Text fx:id="txtNameOrderDetail" layoutX="18.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" styleClass="txt" text="Praboda  Thathsarani" wrappingWidth="212.62366819381714" />
+                        <Text fx:id="txtOrderIdOrderDetails" layoutX="15.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" styleClass="txt" text="O001" wrappingWidth="127.62369537353516" />
+                        <TableView fx:id="tblOrderDetails" layoutX="12.0" layoutY="104.0" onMouseClicked="#productFromTblOnClick" prefHeight="418.0" prefWidth="270.0">
+                           <columns>
+                              <TableColumn fx:id="colItemCode" prefWidth="47.0" />
+                              <TableColumn fx:id="colItem" prefWidth="86.0" />
+                              <TableColumn fx:id="colQtyItem" prefWidth="58.0" />
+                              <TableColumn fx:id="colPriceItem" prefWidth="74.0" />
+                           </columns>
+                           <stylesheets>
+                              <URL value="@../assest/css/tbl.css" />
+                              <URL value="@../assest/css/css.css" />
+                           </stylesheets>
+                        </TableView>
+                        <Text fx:id="txtCutIdOrderDetails" layoutX="213.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="txt" text="C001" textAlignment="RIGHT" wrappingWidth="64.62369537353516" />
+                        <Text fx:id="txtDateOrderDetails" layoutX="18.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="txt" text="2023-11-0" wrappingWidth="94.62369483709335" />
+                        <Text fx:id="txtTimeOrderDetails" layoutX="183.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="txt" text="1.33" textAlignment="RIGHT" wrappingWidth="94.62369483709335" />
+                        <JFXButton fx:id="btnClose" layoutX="242.0" layoutY="9.0" minHeight="20.0" minWidth="31.0" onAction="#resetOnAction" prefHeight="22.0" prefWidth="31.0" style="-fx-background-radius: 10;" styleClass="action-btn">
+                           <graphic>
+                              <GridPane prefHeight="33.0" prefWidth="27.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="59.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assest/icon/icons8-cancel-30.png" />
+                                       </image>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </ImageView>
+                                 </children>
+                              </GridPane>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="27.0" layoutY="573.0" prefHeight="176.0" prefWidth="294.0" style="-fx-background-color: white;" styleClass="shadow">
+                     <children>
+                        <Text layoutX="25.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" styleClass="txt" text="Sub Total" wrappingWidth="212.62369537353516" />
+                        <Text fx:id="txtAllOrdersCount" layoutX="25.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 35;" styleClass="txt" text="LKR" wrappingWidth="58.623695373535156" />
+                        <Text layoutX="31.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" styleClass="txt" text="All Product" wrappingWidth="127.62369537353516" />
+                        <Text layoutX="91.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-fill: #3E4B57; -fx-font-weight: normal;" styleClass="txt" text="All product in You Can See This Counting" textAlignment="RIGHT" wrappingWidth="181.99998539686203" />
+                        <Text fx:id="txtSubTotal" layoutX="84.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 35;" styleClass="txt" text="00.00" wrappingWidth="200.62369537353516" />
+                        <Text fx:id="txtQtyAllOrder" layoutX="142.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" styleClass="txt" text="00" wrappingWidth="127.62369537353516" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneDefault" layoutX="1411.0" layoutY="10.0" prefHeight="764.0" prefWidth="338.0">
+               <children>
+                  <Pane layoutX="26.0" layoutY="12.0" prefHeight="273.0" prefWidth="294.0" style="-fx-background-color: white;" styleClass="shadow">
+                     <children>
+                        <Text layoutX="18.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="Today Orders" wrappingWidth="212.62369537353516" />
+                        <Text fx:id="txtTodayOrdersCount" layoutX="81.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 50;" styleClass="txt" text="12+" wrappingWidth="127.62369537353516" />
+                        <RadioButton fx:id="rBtnAll" layoutX="19.0" layoutY="112.0" mnemonicParsing="false" onAction="#rBtnAllOnAction" prefHeight="30.0" prefWidth="182.0" selected="true" style="-fx-font-size: 20;" styleClass="txt" text="All">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="a" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rBtnTodayOrders" layoutX="19.0" layoutY="151.0" mnemonicParsing="false" onAction="#rBtnTodayOrdersOnAction" prefHeight="30.0" prefWidth="182.0" style="-fx-font-size: 20;" styleClass="txt" text="Today Orders" toggleGroup="$a" />
+                        <RadioButton fx:id="rBtnSelectedDateOrders" layoutX="23.0" layoutY="191.0" mnemonicParsing="false" onAction="#rBtnSelectedDateOrdersOnAction" prefHeight="30.0" prefWidth="182.0" style="-fx-font-size: 20;" styleClass="txt" text="Select Day" toggleGroup="$a" />
+                        <DatePicker fx:id="dpOrder" disable="true" layoutX="34.0" layoutY="226.0" onAction="#dpOrderOnAction" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="505.0" prefHeight="259.0" prefWidth="305.0" style="-fx-background-color: #9FD2E7;" styleClass="shadow">
+                     <children>
+                        <Text fontSmoothingType="LCD" layoutX="31.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40; -fx-fill: white;" styleClass="txt" text="Lavish Styloo" wrappingWidth="235.29035186767578" />
+                        <Text fontSmoothingType="LCD" layoutX="63.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: white;" styleClass="txt" text="Like your Style" wrappingWidth="152.62371063232422" />
+                        <Text layoutX="45.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57; -fx-font-weight: normal;" styleClass="txt" text="we provide you various treatments from head to toe using thebest product,advanced and affordable price" textAlignment="CENTER" wrappingWidth="192.66666278243065" />
+                        <ImageView fitHeight="78.0" fitWidth="77.0" layoutX="242.0" layoutY="-16.0" opacity="0.99" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/icon/image-removebg-preview%20(11).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="25.0" layoutY="309.0" prefHeight="176.0" prefWidth="294.0" style="-fx-background-color: white;" styleClass="shadow">
+                     <children>
+                        <Text layoutX="25.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt" text="All Orders" wrappingWidth="212.62369537353516" />
+                        <Text fx:id="txtAllOrders" layoutX="44.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 50;" styleClass="txt" text="12+" wrappingWidth="127.62369537353516" />
+                        <Text layoutX="29.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" styleClass="txt" text="in this" wrappingWidth="127.62369537353516" />
+                        <Text layoutX="157.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-fill: #3E4B57; -fx-font-weight: normal;" styleClass="txt" text="All product in You Can See This Counting" textAlignment="RIGHT" wrappingWidth="111.66663689979032" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <Pane layoutX="25.0" layoutY="14.0" prefHeight="763.0" prefWidth="1376.0" styleClass="shadow">
+               <children>
+                  <Text layoutX="65.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-fill: #3E4B57;" styleClass="txt" text="All Orders" wrappingWidth="269.62369537353516" />
+                  <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="23.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icon/icons8-data-sheet-50.png" />
+                     </image>
+                  </ImageView>
+                  <TableView fx:id="tblOrder" layoutX="22.0" layoutY="68.0" onMouseClicked="#productFromTblOnClick" prefHeight="657.0" prefWidth="1322.0">
+                     <columns>
+                        <TableColumn fx:id="colOdId" prefWidth="103.0" text="#" />
+                        <TableColumn fx:id="colCusId" prefWidth="99.00003051757812" />
+                        <TableColumn fx:id="colCustomer" minWidth="0.0" prefWidth="410.0" text="Suppler" />
+                        <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="214.0" text="Date" />
+                        <TableColumn fx:id="colTime" minWidth="0.0" prefWidth="177.0" text="Time" />
+                        <TableColumn fx:id="colTotal" minWidth="0.0" prefWidth="189.0" text="Total" />
+                        <TableColumn fx:id="colQty" minWidth="0.0" prefWidth="124.0" text="Product" />
+                     </columns>
+                     <stylesheets>
+                        <URL value="@../assest/css/tbl.css" />
+                        <URL value="@../assest/css/css.css" />
+                     </stylesheets>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../assest/css/tbl.css" />
+      <URL value="@../assest/css/css.css" />
+   </stylesheets>
+</AnchorPane>

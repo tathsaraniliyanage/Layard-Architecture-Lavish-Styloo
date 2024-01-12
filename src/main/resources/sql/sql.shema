@@ -1,0 +1,186 @@
+DROP DATABASE Lavish_styloo;
+
+create
+database Lavish_styloo;
+use
+Lavish_styloo;
+create table employee
+(
+    nic        varchar(25) primary key,
+    first_name varchar(50),
+    last_name  varchar(50),
+    email      varchar(25),
+    specially  varchar(25),
+    city       varchar(50),
+    lane       varchar(50),
+    street     varchar(50)
+);
+insert into employee
+values ('34343', 'maya', 'weerasekara', 'maya25@gmail.com', 'aa', 'galle', 'kaluwella road', 'kaluwella');
+values ('34344', 'ama', 'gunasekara', 'ama25@gmail.com', 'ab', 'matara', 'wakwella road', 'wakwella');
+
+create table user
+(
+    userName varchar(25) primary key,
+    password varchar(10)
+);
+insert into user
+values ('maya25', 'mayayaya');
+
+create table attendance
+(
+    date     Date,
+    in_time  Time,
+    out_time Time,
+    nic      varchar(25),
+    constraint foreign key (nic) references employee (nic) on update cascade on delete cascade
+);
+insert into attendance
+values ('2001_02_09', '06.09', '09.50', '34343');
+
+create table salary
+(
+    s_id   varchar(25) primary key,
+    date   Date,
+    time   Time,
+    salary decimal,
+    bonus  decimal,
+    nic    varchar(25),
+    constraint foreign key (nic) references employee (nic) on update cascade on delete cascade
+);
+insert into salary
+values ('s001', '2023_09_08', '02.30', '5600', '600', '34343');
+
+create table customer
+(
+    cust_id    varchar(25) primary key,
+    first_name varchar(50),
+    last_name  varchar(50),
+    email      varchar(25),
+    city       varchar(50),
+    lane       varchar(50),
+    street     varchar(50),
+    contact    int(25)
+);
+insert into customer
+values ('c001', 'Praboda', 'liyanage', 'zeri27@gmail.com', 'kandy', 'wewa road', 'wewgama', 2324535);
+
+create table booking
+(
+    booking_id varchar(25) primary key,
+    date       Date,
+    time       Time,
+    total      int(5),
+    cust_id    varchar(25),
+    constraint foreign key (cust_id) references customer (cust_id) on update cascade on delete cascade
+);
+insert into booking
+values ('b001', '2023.09.07', '05.20', 90, 'c001');
+
+create table payment
+(
+    payment_id  varchar(25) primary key,
+    net_payment decimal,
+    date        Date,
+    time        Time,
+    booking_id  varchar(25),
+    constraint foreign key (booking_id) references booking (booking_id) on update cascade on delete cascade
+);
+insert into payment
+values ('p001', '7800', '2023.04.26', '06.20', 'b001');
+
+create table treatment
+(
+    treat_id    varchar(25) primary key,
+    price       decimal,
+    category    varchar(50),
+    treatment   varchar(50),
+    description varchar(50)
+);
+insert into treatment
+values ('t001', '8000', '1st', 'nailart', 'bluecolournailart');
+
+create table booking_details
+(
+    booking_id         varchar(25),
+    nic                varchar(25),
+    treat_id           varchar(25),
+    time_for_treatment Time,
+    charge             decimal,
+    constraint foreign key (nic) references employee (nic) on update cascade on delete cascade,
+    constraint foreign key (booking_id) references booking (booking_id) on update cascade on delete cascade,
+    constraint foreign key (treat_id) references treatment (treat_id) on update cascade on delete cascade
+);
+insert into booking_details
+values ('b001', '34343', 't001', '09.10', '9000');
+
+create table customer_order
+(
+    cust_oid varchar(25) primary key,
+    cust_id  varchar(25),
+    date     Date,
+    time     Time,
+    total    int,
+    constraint foreign key (cust_id) references customer (cust_id) on update cascade on delete cascade
+);
+insert into customer_order
+values ('co001', 'c001', '2023.04.05', '03.55', 3400);
+
+create table product
+(
+    product_code varchar(25) primary key,
+    product      varchar(25),
+    description  varchar(25),
+    unit_price   decimal,
+    qty          int(25)
+);
+insert into product
+values ('p001', 'suncream', 'whitesun', '6000', 34);
+
+create table order_details
+(
+    product_code varchar(25),
+    cust_oid     varchar(25),
+    price        decimal,
+    qty          int(25),
+    constraint foreign key (cust_oid) references customer_order (cust_oid) on update cascade on delete cascade,
+    constraint foreign key (product_code) references product (product_code) on update cascade on delete cascade
+);
+insert into order_details
+values ('p001', 'co001', '9000', 67);
+
+create table supplier
+(
+    supplier_id   varchar(25) primary key,
+    supplier_name varchar(25),
+    company       varchar(25),
+    email         varchar(50),
+    contact       int(25),
+    location      varchar(25)
+);
+insert into supplier
+values ('s001', 'yerina', 'abc', 'yerian1232gmail.com', 656575, 'colombo');
+
+create table supplier_order
+(
+    sup_oid     varchar(25) primary key,
+    supplier_id varchar(25),
+    date        Date,
+    time        Time,
+    total       int(25),
+    constraint foreign key (supplier_id) references supplier (supplier_id) on update cascade on delete cascade
+);
+insert into supplier_order
+values ('so001', 's001', '2023.05.05', '04.34', 6700);
+
+create table supplier_order_details
+(
+    sup_oid      varchar(25),
+    product_code varchar(25),
+    price        decimal,
+    qty          int(25),
+    constraint foreign key (sup_oid) references supplier_order (sup_oid) on update cascade on delete cascade,
+    constraint foreign key (product_code) references product (product_code) on update cascade on delete cascade
+);
+insert into supplier_order_details
+values ('so001', 'p001', '8000', 56);

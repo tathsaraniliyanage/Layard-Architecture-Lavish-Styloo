@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AllEmployee" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad97d3e3-1fbd-44d5-85b9-232eae4eb18a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="lavish_styloo"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT b.booking_id ,c.cust_id,c.first_name,c.last_name , b.date,b.time,b.total FROM booking b inner join customer c on b.cust_id = c.cust_id WHERE date=CURDATE()]]>
+	</queryString>
+	<field name="booking_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="booking_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="booking_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="booking"/>
+	</field>
+	<field name="cust_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cust_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="cust_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="first_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="first_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="first_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="last_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="last_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="last_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="date"/>
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="booking"/>
+	</field>
+	<field name="time" class="java.sql.Time">
+		<property name="com.jaspersoft.studio.field.name" value="time"/>
+		<property name="com.jaspersoft.studio.field.label" value="time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="booking"/>
+	</field>
+	<field name="total" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="total"/>
+		<property name="com.jaspersoft.studio.field.label" value="total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="booking"/>
+	</field>
+	<group name="nic"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="71" backcolor="#28A0D4" uuid="f3e84e4e-5366-42b3-8a4b-e49ba39f9131"/>
+				<staticText>
+					<reportElement x="180" y="20" width="224" height="30" forecolor="#FFFFFF" uuid="0c95fce0-1e08-41b5-84fa-acf93189f849"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="22" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ALL EMPLOYEES]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="81" height="30" uuid="1dc46c0b-8887-476e-b867-1bc519ce617c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="69c96037-c477-4d72-8622-f2bb764f749e"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="0" width="79" height="30" uuid="6bc99f2b-eeb1-4a23-84c1-22235c157add">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eca2a095-fd6e-4f3b-bf0b-18d81cf3f059"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="79" height="30" uuid="682a55cd-5096-4bb8-9783-1410e5e917d2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba4315ae-b093-46ea-a41f-0441222ce34b"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="79" height="30" uuid="92792557-c78f-4446-b135-3227c2dcdc0c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="930f1f8c-908e-42f7-bec0-8c26be106c6d"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="0" width="79" height="30" uuid="5031d5d4-6b8b-4a29-a668-c8070a4fdb8c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af24624f-2dc7-4655-be6f-f64601f61783"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="79" height="30" uuid="7009b5b2-074f-4447-ad58-ed2621f90fca">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="593418eb-f32e-40e8-b55f-98a4e9a7ef44"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="81" height="30" uuid="6322fc3f-e05a-4020-afcf-f36ef4181a8b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="69c96037-c477-4d72-8622-f2bb764f749e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{booking_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="0" width="79" height="30" uuid="d3b42ca7-f354-4ee8-829c-d8163c75b0eb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eca2a095-fd6e-4f3b-bf0b-18d81cf3f059"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{cust_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="79" height="30" uuid="ddfcd301-e55f-432b-9933-cb8b874e18f0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba4315ae-b093-46ea-a41f-0441222ce34b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{first_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="0" width="79" height="30" uuid="5287ec58-e488-4081-914d-a90aeefc77da">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5182a56b-6571-41f9-b9e8-5a8688decc8f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{last_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="0" width="79" height="30" uuid="d21fabc8-6c25-47af-9946-478a34596300">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="930f1f8c-908e-42f7-bec0-8c26be106c6d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="0" width="79" height="30" uuid="3e4c0380-05c5-4897-b243-e587651f866e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af24624f-2dc7-4655-be6f-f64601f61783"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="79" height="30" uuid="63d87e6b-ac3f-4dde-8635-110061b57754">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="593418eb-f32e-40e8-b55f-98a4e9a7ef44"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
