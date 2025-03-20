@@ -75,9 +75,10 @@ Lavish Styloo is a comprehensive saloon management system designed to streamline
    - **Tools**: IntelliJ IDEA, MySQL Workbench, Git
 
 
-## Installation and Setup 🔗📍
+## Installation and Setup 📍
 
-### Prerequisites
+### Prerequisites 🔗
+
    1. Java Development Kit (JDK): Ensure JDK 8 or higher is installed.
 
    2. MySQL Server: Install and configure MySQL.
@@ -85,7 +86,7 @@ Lavish Styloo is a comprehensive saloon management system designed to streamline
    3. IDE: Use IntelliJ IDEA or any Java-supported IDE.
 
 
-### Steps to Run the Project 
+### Steps to Run the Project 🔗
 
 1. Clone the Repository:
 
