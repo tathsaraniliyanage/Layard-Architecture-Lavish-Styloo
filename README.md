@@ -1,4 +1,4 @@
-# Lavish Styloo - Saloon Management System 🚀
+# Lavish Styloo - Saloon Management System 🪞
 
 Lavish Styloo is a comprehensive saloon management system designed to streamline the operations of a saloon or spa. It provides an efficient way to manage bookings, payments, employees, customers, orders, treatments, and user authentication. Built using Java and MySQL, the system follows a Layered Architecture for better maintainability and scalability.
 
