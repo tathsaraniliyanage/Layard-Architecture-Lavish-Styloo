@@ -91,7 +91,7 @@ Lavish Styloo is a comprehensive saloon management system designed to streamline
 1. Clone the Repository:
 
   ```
-  git clone https://github.com/your-username/lavish-styloo.git
+  git clone https://github.com/tathsaraniliyanage/Layard-Architecture-Lavish-Styloo.git
   ```
 
 2. Set Up the Database:
