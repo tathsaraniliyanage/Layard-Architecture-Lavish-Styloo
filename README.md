@@ -57,33 +57,33 @@ Lavish Styloo is a comprehensive saloon management system designed to streamline
 
     - Follows a structured architecture for better code organization:
 
-        - Presentation Layer: Handles user interface and input.
+        - Presentation Layer : Handles user interface and input.
 
-        - Business Logic Layer: Manages application logic and rules.
+        - Business Logic Layer : Manages application logic and rules.
 
-        - Data Access Layer: Handles database interactions.
+        - Data Access Layer : Handles database interactions.
 
 
 ## Technologies Used 💡
 
-   - **Programming Language**: Java
+   - **Programming Language** : Java
 
-   - **Database**: MySQL
+   - **Database** : MySQL
 
-   - **Architecture**: Layered Architecture (Presentation, Business Logic, Data Access)
+   - **Architecture** : Layered Architecture (Presentation, Business Logic, Data Access)
 
-   - **Tools**: IntelliJ IDEA, MySQL Workbench, Git
+   - **Tools** : IntelliJ IDEA, MySQL Workbench, Git
 
 
 ## Installation and Setup 📍
 
 ### Prerequisites 🔗
 
-   1. Java Development Kit (JDK): Ensure JDK 8 or higher is installed.
+   1. Java Development Kit (JDK) : Ensure JDK 8 or higher is installed.
 
-   2. MySQL Server: Install and configure MySQL.
+   2. MySQL Server : Install and configure MySQL.
 
-   3. IDE: Use IntelliJ IDEA or any Java-supported IDE.
+   3. IDE : Use IntelliJ IDEA or any Java-supported IDE.
 
 
 ### Steps to Run the Project 🔗
