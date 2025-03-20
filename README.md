@@ -135,6 +135,12 @@ The database consists of the following tables:
 
 
 ## Screenshots 🖼️
+![Screenshot (480)](https://github.com/user-attachments/assets/5ad5eeef-e5e7-4590-bcc4-5534a66d86c2)
+![Screenshot (482)](https://github.com/user-attachments/assets/a9c39ff6-01c0-4c27-a445-67916c6b5085)
+![Screenshot (453)](https://github.com/user-attachments/assets/a1595a8e-8fad-43c1-845e-d87c20a03034)
+![Screenshot (477)](https://github.com/user-attachments/assets/91d1541c-1ed0-4bdd-ab4c-9e3deaf1f296)
+
+
 
 
 
