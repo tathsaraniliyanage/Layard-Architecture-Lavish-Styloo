@@ -1,9 +1,9 @@
-# Lavish Styloo - Saloon Management System
+# Lavish Styloo - Saloon Management System 🚀
 
 Lavish Styloo is a comprehensive saloon management system designed to streamline the operations of a saloon or spa. It provides an efficient way to manage bookings, payments, employees, customers, orders, treatments, and user authentication. Built using Java and MySQL, the system follows a Layered Architecture for better maintainability and scalability.
 
 
-## Features
+## Features 🌟
 
 1. Booking Management:
 
@@ -64,18 +64,18 @@ Lavish Styloo is a comprehensive saloon management system designed to streamline
         - Data Access Layer: Handles database interactions.
 
 
-## Technologies Used
+## Technologies Used 💡
 
-   - Programming Language: Java
+   - **Programming Language**: Java
 
-   - Database: MySQL
+   - **Database**: MySQL
 
-   - Architecture: Layered Architecture (Presentation, Business Logic, Data Access)
+   - **Architecture**: Layered Architecture (Presentation, Business Logic, Data Access)
 
-   - Tools: IntelliJ IDEA, MySQL Workbench, Git
+   - **Tools**: IntelliJ IDEA, MySQL Workbench, Git
 
 
-## Installation and Setup
+## Installation and Setup 🔗📍
 
 ### Prerequisites
    1. Java Development Kit (JDK): Ensure JDK 8 or higher is installed.
@@ -85,7 +85,7 @@ Lavish Styloo is a comprehensive saloon management system designed to streamline
    3. IDE: Use IntelliJ IDEA or any Java-supported IDE.
 
 
-### Steps to Run the Project
+### Steps to Run the Project 
 
 1. Clone the Repository:
 
@@ -113,7 +113,7 @@ Lavish Styloo is a comprehensive saloon management system designed to streamline
 
 ---
 
-## Database Schema
+## Database Schema 🪜
 
 The database consists of the following tables:
 
@@ -133,11 +133,10 @@ The database consists of the following tables:
 
 
 
-## Screenshots 
+## Screenshots 🖼️
 
 
 
-## License
+## 📚 License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
-
+This project is licensed under the [MIT License](LICENSE).
