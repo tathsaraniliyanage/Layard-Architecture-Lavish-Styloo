@@ -1,4 +1,8 @@
-# Lavish Styloo - Saloon Management System 🪞
+# Layered Architecture - Saloon Management System 🪞
+
+<h1 align="center">
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=1100&height=70&duration=4000&lines=Lavish+Styloo+&color=078179" />
+</h1>
 
 Lavish Styloo is a comprehensive saloon management system designed to streamline the operations of a saloon or spa. It provides an efficient way to manage bookings, payments, employees, customers, orders, treatments, and user authentication. Built using Java and MySQL, the system follows a Layered Architecture for better maintainability and scalability.
 
