@@ -151,3 +151,8 @@ The database consists of the following tables:
 ## 📚 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+
+
+## Contact ✉️
+For any inquiries, reach out at **prabodhathathsarani28@gmail.com**
